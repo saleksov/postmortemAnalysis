@@ -1,2 +1,2 @@
 TO DO:
-1. Email colaborating faculty
+1. Email colaborating faculty - Jamie Davis
