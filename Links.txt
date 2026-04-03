@@ -1,2 +1,6 @@
 Email 1: Jimmy to prof
 https://docs.google.com/document/d/1DTZw3v_FyZOu-kWrWmk63HrQS085tZR6IkAJR4UtVDY/edit?tab=t.0
+
+Paper 1: https://dl.acm.org/doi/fullHtml/10.1145/3551349.3559545
+Paper 2: https://www.dhs.gov/archive/news/2022/07/14/cyber-safety-review-board-releases-report-its-review-log4j-vulnerabilities-and
+Paper 3: https://ieeexplore.ieee.org/document/8804464
