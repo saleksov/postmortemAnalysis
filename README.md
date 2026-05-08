@@ -1,31 +1,35 @@
 # Narrative–Technical Drift Project
 
-This repository contains the implementation work for our ECE 60872 project on applying GitHub bug-fix classifiers to evaluate narrative–technical drift in postmortems.
+This repository contains the implementation for our ECE 60872 project on applying GitHub bug-fix classifiers to evaluate Narrative–Technical Drift in postmortems.
 
-## Current Contents
+## Contents
+
+The project is organized into three annotated Google Colab notebooks:
 
 - `Phase_1_GitHub_Drift_Scoring.ipynb`  
-  A step-by-step annotated Google Colab notebook for Phase 1.
+  Collects linked GitHub issue–pull request pairs and computes Narrative–Technical Drift scores.
 
-## Phase 1
+- `Phase_2_Postmortem_Accountability_Labeling.ipynb`  
+  Applies the postmortem accountability rubric and organizes human/LLM scoring.
 
-Phase 1 collects linked GitHub issue–pull request pairs and computes a Narrative–Technical Drift score from:
-
-- narrative severity features from issue/PR text
-- technical risk features from patch metadata
-- sensitive-file indicators
-
-The notebook is written to be run in Google Colab.
+- `Phase_3_Weakly_Supervised_Transfer.ipynb`  
+  Trains a weakly supervised embedding-based classifier using GitHub drift labels and applies it to postmortem text.
 
 ## How to Run
 
-1. Open the notebook in Google Colab.
+1. Open each notebook in Google Colab.
 2. Mount Google Drive when prompted.
-3. Add a GitHub token if available, preferably through Colab secrets as `GITHUB_TOKEN`.
-4. Run the notebook cells in order.
+3. Add any required input files to the expected Drive folder.
+4. Run the notebook blocks in order.
 
-The notebook is annotated throughout, so each block explains what it is doing and how it contributes to the Phase 1 drift-baseline.
+Each notebook is step-by-step annotated, so the blocks explain what they do and how they connect to the overall pipeline.
 
-## Status
+## Pipeline Summary
 
-Only Phase 1 is currently included. Future work may add the Phase 2 postmortem rubric and Phase 3 weakly supervised transfer classifier.
+Phase 1 builds the GitHub-derived drift-baseline.  
+Phase 2 creates accountability scores for postmortems.  
+Phase 3 compares the GitHub-derived drift signal against the postmortem accountability scores.
+
+## Notes
+
+The notebooks are designed for reproducibility in Google Colab. A GitHub token can be added through Colab secrets as `GITHUB_TOKEN` to improve API access during Phase 1.
