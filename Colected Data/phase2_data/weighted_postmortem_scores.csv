@@ -1,0 +1,16 @@
+document_id,source_url,gpt_score,claude_score,consensus_score,weighted_score,max_score,weighted_pct
+atlassian_2022_april_outage,https://www.atlassian.com/blog/atlassian-engineering/post-incident-review-april-2022-outage,13,13,13,13.0,13,1.0
+discord_connectivity_2017,https://discordstatus.com/incidents/dj3l6lw926kl,13,13,13,13.0,13,1.0
+gitlab_database_2017,https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/,13,13,13,13.0,13,1.0
+roblox_2021,https://about.roblox.com/newsroom/2022/01/roblox-return-to-service-10-28-10-31-2021,13,13,13,13.0,13,1.0
+eve_boot_ini_2007,https://www.eveonline.com/news/view/about-the-boot.ini-issue,13,12,13,12.75,13,0.9807692307692307
+cloudflare_2019,https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/,13,11,13,12.5,13,0.9615384615384616
+azure_storage_2014,https://azure.microsoft.com/en-us/blog/update-on-azure-storage-service-interruption/,12,11,12,11.75,13,0.9038461538461539
+aws_s3_2008,https://web.archive.org/web/20220403060108/https://status.aws.amazon.com/s3-20080720.html,11,11,10,10.5,13,0.8076923076923077
+github_ddos_2018,https://github.blog/news-insights/company-news/ddos-incident-report/,11,9,10,10.0,13,0.7692307692307693
+mozilla_firefox_2022,https://web.archive.org/web/20250314111052/https://hacks.mozilla.org/2022/02/retrospective-and-technical-details-on-the-recent-firefox-outage/,11,8,9,9.25,13,0.7115384615384616
+rust_dns_2023,https://blog.rust-lang.org/inside-rust/2023/02/08/dns-outage-portmortem/,9,10,8,8.75,13,0.6730769230769231
+stack_exchange_2014,https://web.archive.org/web/20201020103424/https://stackstatus.net/post/96025967369/outage-post-mortem-august-25th-2014,9,8,8,8.25,13,0.6346153846153846
+heroku_2020_git_push,https://www.heroku.com/blog/how-i-broke-git-push-heroku-main/,7,6,8,7.25,13,0.5576923076923077
+anthropic_2026_claude_code,https://www.anthropic.com/engineering/april-23-postmortem,9,9,5,7.0,13,0.5384615384615384
+lkml_leapsecond_futex_2012,https://web.archive.org/web/20220320100036/https://lkml.org/lkml/2012/7/1/203,6,4,5,5.0,13,0.38461538461538464

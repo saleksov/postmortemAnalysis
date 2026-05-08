@@ -1,0 +1,493 @@
+Postmortem Accountability-Grading Principles
+
+You are grading a public technical postmortem using a theory-driven accountability rubric.
+
+The goal is not to judge whether the company is morally good or whether the postmortem is objectively truthful. The goal is to score how strongly the postmortem text publicly represents accountability.
+
+Accountability means: the organization makes the failure legible, attributable, and repairable to affected users or readers.
+
+For every rubric item:
+
+Read the postmortem carefully.
+
+Assign only one score.
+
+Use only evidence from the postmortem text.
+
+Include one short evidence quote for each score.
+
+Do not compare the postmortem to another company in the rationale.
+
+Do not reward information that is implied but not stated.
+
+Score the public text, not what the company may have done privately.
+
+Core Principles
+
+Principle 1: Disclosure of Harm
+
+Accountability requires disclosing the scale of harm.
+
+A postmortem is more accountable when it tells readers who or what was affected, how many users/customers/requests/systems were affected, how long the impact lasted, and how severe the degradation was.
+
+This principle maps to:
+
+Item 1 — Quantification of User Impact
+
+Score based on whether user-facing impact is quantified.
+
+0 = Impact is described only qualitatively.
+
+Examples: “some users,” “degraded experience,” “quality issues,” “felt slower.”
+
+1 = Some numbers are provided, but impact remains only partially quantified.
+
+Examples: duration only, or one isolated count, without scope/magnitude.
+
+2 = Impact is quantified across multiple dimensions.
+
+Examples: affected users/customers, traffic share, request failure rate, latency, duration, geographic scope, service scope, data loss count.
+
+Evidence to look for:
+
+outage duration
+
+affected-user count
+
+customer/site count
+
+traffic percentage
+
+error rate
+
+latency
+
+number of failed requests
+
+amount of lost data
+
+number of affected services or regions
+
+Principle 2: Temporal Answerability
+
+Accountability requires exposing what the organization knew, when it knew it, and how quickly it responded.
+
+A postmortem is more accountable when readers can reconstruct detection, escalation, mitigation, and recovery timing.
+
+This principle maps to:
+
+Item 2 — Internal-Awareness Timeline
+
+Score based on whether the document gives a reconstructable timeline.
+
+0 = Minimal timeline.
+
+Only broad dates or vague ordering are given.
+
+Reader cannot compute time-to-detect or time-to-mitigate.
+
+1 = Partial timeline.
+
+Deploy/revert dates or broad windows are given.
+
+Uses vague timing such as “soon after,” “later that day,” “over a week.”
+
+Exact detection or mitigation timing is missing.
+
+2 = Explicit timeline.
+
+Gives timestamps or clearly bounded times for detection, escalation, mitigation, and/or recovery.
+
+Reader can compute response gaps.
+
+Evidence to look for:
+
+incident start time
+
+detection time
+
+first alert/page time
+
+escalation time
+
+mitigation time
+
+recovery/restoration time
+
+deployment/revert windows
+
+Principle 3: Inspectable Causality
+
+Accountability requires making the causal pathway inspectable.
+
+A postmortem is more accountable when it identifies the actor, team, artifact, configuration, code path, dependency, prompt, rule, deployment, or mechanism that caused the incident. Individual blame is not required.
+
+This principle maps to:
+
+Item 3 — Causal Specificity / Agency
+
+Score based on whether the cause is concrete and inspectable.
+
+0 = Abstract or passive causality.
+
+Examples: “a bug caused the issue,” “an error was introduced,” “the system entered an inconsistent state.”
+
+1 = Mixed specificity.
+
+Some concrete artifacts or mechanisms are named, but many causal claims remain abstract.
+
+2 = High specificity.
+
+The document names the relevant artifact, mechanism, system, actor/team, config, code path, prompt, rule, or deployment.
+
+The causal pathway is inspectable.
+
+Evidence to look for:
+
+specific code/config/prompt/rule
+
+named service/component
+
+deployment/change description
+
+protocol/tool behavior
+
+command/script
+
+system interaction
+
+named team/process path
+
+Do not require a named individual. System-level specificity can score 2.
+
+Principle 4: Systemic Responsibility
+
+Accountability requires acknowledging the broader failure stack, not reducing the incident to one convenient root cause.
+
+A postmortem is more accountable when it names interacting technical, procedural, organizational, testing, monitoring, training, rollout, communication, or support failures.
+
+This principle maps to:
+
+Item 4 — Failure Enumeration
+
+Score based on whether the document enumerates contributing factors.
+
+0 = No contributing-factor enumeration.
+
+The document presents one or more incident causes but does not enumerate a broader failure stack.
+
+1 = Limited enumeration.
+
+Names 2–4 contributing factors for the same failure/degradation.
+
+Mostly technical.
+
+2 = Broad enumeration.
+
+Names 5+ contributing factors.
+
+Includes at least one procedural, organizational, monitoring, rollout, testing, training, support, or communication failure.
+
+Evidence to look for:
+
+“what went wrong” lists
+
+contributing factors
+
+5 Whys
+
+root cause plus contributing causes
+
+testing gaps
+
+monitoring/alerting gaps
+
+process/runbook gaps
+
+communication/support gaps
+
+rollback/recovery gaps
+
+organizational ownership gaps
+
+Do not give 2 for merely listing multiple symptoms. The factors should explain why the failure occurred, spread, persisted, or was hard to recover from.
+
+Principle 5: Verifiable Repair
+
+Accountability requires repair commitments that are concrete enough to be audited.
+
+A postmortem is more accountable when its action items are specific, falsifiable, scoped, dated, assigned, measured, completed, or tied to named deliverables.
+
+This principle maps to:
+
+Item 5 — Action Item Concreteness
+
+Score based on whether remediation is concrete and verifiable.
+
+0 = Mostly vague action items.
+
+Examples: “improve processes,” “strengthen controls,” “review systems,” “communicate better.”
+
+1 = Concrete but weakly verifiable.
+
+Names concrete technical or process changes.
+
+But most lack dates, owners, metrics, completion status, acceptance criteria, or specific scope.
+
+2 = Concrete and falsifiable.
+
+Most action items name concrete changes and include at least two of the following:
+
+deadline/ETA
+
+completion status
+
+owner/team
+
+metric
+
+count/scope
+
+acceptance criterion
+
+named deliverable
+
+Evidence to look for:
+
+“Done”
+
+ETA/deadline
+
+owner/team
+
+exact system to be changed
+
+migration target
+
+rollout plan
+
+monitoring/alert to be added
+
+number of objects reviewed
+
+named tool/process/runbook
+
+measurable acceptance condition
+
+Principle 6: Recognition of Affected Parties
+
+Accountability requires recognizing affected users/customers as harmed parties, not just as sources of reports or feedback.
+
+A postmortem is more accountable when it explicitly apologizes, accepts responsibility, expresses remorse, or offers restitution.
+
+This principle maps to:
+
+Item 6 — Stance Toward Harm Caused
+
+Score based on how directly the document acknowledges harm and responsibility.
+
+0 = No harm acknowledgment.
+
+The document describes the technical failure but does not clearly acknowledge harm to users/customers.
+
+Or it frames the response mainly as information-sharing, gratitude, or appreciation.
+
+1 = Mild or implicit acknowledgment.
+
+Acknowledges poor experience or disruption, but mildly.
+
+Examples: “this is not the experience users should expect,” “we appreciate your patience,” “users were disrupted.”
+
+2 = Explicit remorse or responsibility.
+
+Expresses apology, remorse, shame, responsibility, or restitution.
+
+Examples: “we are sorry,” “we apologize,” “we are ashamed,” “we take full responsibility,” “we know this hurt customers,” “we are issuing credits/refunds/resets.”
+
+Evidence to look for:
+
+apology
+
+remorse/shame
+
+explicit responsibility
+
+“impact on customers”
+
+restitution/credits/refunds/resets
+
+recognition of disruption or lost work
+
+Principle 7: Failure-Centered Framing
+
+Accountability requires centering the failure itself, rather than centering discourse, rumors, complaints, or reports about the failure.
+
+A postmortem is more accountable when the title and opening make the outage/degradation/incident the subject.
+
+This principle maps to:
+
+Item 7 — Framing Subject
+
+Score based on the title and opening framing.
+
+0 = Discourse-centered framing.
+
+Centers reports, concerns, rumors, feedback, customer questions, or public conversation.
+
+Examples: “An update on recent quality reports,” “Responding to customer concerns.”
+
+1 = Failure-centered framing.
+
+Centers the outage, degradation, incident, failure, postmortem, or return-to-service process.
+
+Examples: “Details of the outage,” “Incident postmortem,” “Return to service,” “DDoS incident report.”
+
+Evidence to look for:
+
+title
+
+subtitle
+
+first paragraph
+
+framing sentence
+
+Optional Narrative Flags
+
+These are not included in the numeric score. Mark them only if clearly present.
+
+Flag A: Defensive Denial
+
+Use when the document responds to an external accusation, suspected motive, or reputational claim rather than only explaining the engineering record.
+
+Examples:
+
+“We never intentionally degraded the model.”
+
+“This was not caused by negligence.”
+
+“Contrary to speculation…”
+
+Output:
+
+flag_type = Defensive denial
+
+evidence_quote
+
+rationale
+
+Flag B: Embedded Marketing
+
+Use when the document includes product promotion, model promotion, brand reinforcement, competitive positioning, or reliability advertising inside the postmortem.
+
+Examples:
+
+“Model X found the bug while Model Y did not.”
+
+“Our world-class platform…”
+
+“Our industry-leading reliability…”
+
+Output:
+
+flag_type = Embedded marketing
+
+evidence_quote
+
+rationale
+
+Flag C: Responsibility Diffusion
+
+Use when the document disperses responsibility into vague systems, users, conditions, or reports while avoiding clear internal causes.
+
+Examples:
+
+“Unexpected usage patterns revealed an issue.”
+
+“Some users reported concerns.”
+
+“A rare combination of factors occurred.”
+
+Do not mark this flag if the document later gives a concrete internal cause.
+
+Output:
+
+flag_type = Responsibility diffusion
+
+evidence_quote
+
+rationale
+
+If no flags apply, output:
+
+flag_type = None
+
+evidence_quote = empty
+
+rationale = “No clear defensive denial, embedded marketing, or responsibility diffusion flag.”
+
+Output Format
+
+For each postmortem, output:
+
+The link.
+
+A CSV block with this exact header:
+
+document_id,item_number,item_name,principle,score,evidence_quote,rationale
+
+One row for each of the seven items.
+
+One total row.
+
+The total row should use:
+
+item_number = total
+
+item_name = Total score
+
+principle = empty
+
+score = sum of all item scores out of 13
+
+evidence_quote = empty
+
+rationale = concise rubric-internal explanation
+
+Do not compare the document to another company in the total rationale.
+
+Good total rationale examples:
+
+“High score driven by quantified impact, explicit timeline, causal specificity, broad failure enumeration, concrete remediation, harm acknowledgment, and failure-centered framing.”
+
+“Mixed score driven by strong causal specificity and failure-centered framing, with weaker quantified impact, failure enumeration, action-item verifiability, and harm acknowledgment.”
+
+“Low score driven by qualitative impact description, partial timeline, limited failure enumeration, and discourse-centered framing.”
+
+Bad total rationale examples:
+
+“More political than Cloudflare.”
+
+“Less accountable than Roblox.”
+
+“Better than Anthropic.”
+
+Then output optional flags in a second CSV block with this exact header:
+
+document_id,flag_type,evidence_quote,rationale
+
+Scoring Reminder
+
+Total possible score: 13.
+
+Items 1–6 are scored 0, 1, or 2.Item 7 is scored 0 or 1.
+
+Interpretation:
+
+9–13 = high accountability-framing score
+
+7–8 = mixed accountability-framing score
+
+0–6 = low accountability-framing score
+
+This score measures accountability framing in the public text, not the company’s actual internal accountability or moral responsibility.

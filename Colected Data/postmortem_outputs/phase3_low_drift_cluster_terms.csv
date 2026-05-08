@@ -1,0 +1,6 @@
+low_drift_cluster,row_count,top_terms
+0,14,"node, ares, dns, behavior, license, node js, level, js, frame, contribution, expected behavior, expected, validation, version, pointer"
+1,11,"rust, rust lang rust, rust lang, lang rust, lang, arm, fixes rust, fixes rust lang, triagebot, const, rustc, cfg, lang rust fixes, rust fixes, rust fixes rust"
+2,14,"gh, gh gh, gh issue, prs, linked prs, linked, issue, issue number, number, gh gh gh, gh issue number, gh linked prs, linked prs gh, prs gh, gh linked"
+3,2,"ruby, details, rb, home, lib, details details, controller, blocking, action, concurrent, leaks, block, support, stream, test"
+4,21,"rails, request, vs, test, workbench, storage, widget, kind, code, schema, patch, issue, kubernetes, version, fix"

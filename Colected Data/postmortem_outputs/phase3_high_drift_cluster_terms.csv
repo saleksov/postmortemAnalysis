@@ -1,0 +1,6 @@
+high_drift_cluster,row_count,top_terms
+0,14,"gh, number, issue, prs, title, issue number, gh gh, gh issue, linked prs, pr, linked, refers, pull request title, title following format, title following"
+1,6,"triagebot, rust, let, exceptions, case, order, thread, exception, ignore, start, start triagebot, fixes, end, called, fixes fixes"
+2,10,"gh, gh gh, gh gh gh, linked prs, gh issue, prs, linked, issue, preview, prs gh, linked prs gh, gh linked, gh linked prs, gh issue number, cpython"
+3,25,"kind, pr, details, api, license, windows, dns, release, fixes, kubernetes, id, add, node, does, link"
+4,7,"workspace, riscv, backtrace, build, rust, compiler, rustc, lint, cargo, node, code, ice, target, rust backtrace, error"

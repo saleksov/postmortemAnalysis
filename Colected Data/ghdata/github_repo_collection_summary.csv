@@ -1,0 +1,9 @@
+repo,issues_checked,issues_with_merged_linked_pr,multiple_pr_match_count,unmerged_pr_count_seen,rows_created,linkage_rate
+python/cpython,94,59,43,22,59,0.6276595744680851
+nodejs/node,62,45,12,13,45,0.7258064516129032
+microsoft/vscode,200,34,15,4,34,0.17
+kubernetes/kubernetes,77,47,28,30,47,0.6103896103896104
+Homebrew/homebrew-core,0,0,0,0,0,0.0
+rust-lang/rust,50,41,11,7,41,0.82
+golang/go,200,0,1,8,0,0.0
+rails/rails,69,22,10,28,22,0.3188405797101449
